@@ -12,8 +12,7 @@ entryForm.addEventListener("submit", addEntryToDOM);
  * 3. appends the div to section 
  * 4. clears the entry text box
  * 5. hides the entry by default
- * 6. adds a button to the entry
- * 7. when button is clicked, entry is displayed*/
+ * 6. adds a button to the entry*/
 function addEntryToDOM(event) {
     event.preventDefault();
     let entryDiv = document.createElement("div");
@@ -25,11 +24,21 @@ function addEntryToDOM(event) {
     entryDiv.style.display = "none";
 
     let displayEntryButton = document.createElement("button");
+    displayEntryButton.classList.add("entry-button");
     displayEntryButton.textContent = entry++;
     entriesNav.appendChild(displayEntryButton);
 
+    /* when button is clicked, it loops through all entries
+     * and hides them. Then it displays the one corresponding 
+     * to the button that was clicked
+     */
     displayEntryButton.addEventListener("click", function() {
+        let allEntries = document.querySelectorAll(".single-entry");
+        for (let i = 0; i < allEntries.length; i++) {
+            allEntries[i].style.display = "none";
+        }
         entryDiv.style.display = "block";
     })
+
 }
 

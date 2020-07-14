@@ -60,3 +60,11 @@ body {
     margin: 4px;
     border-bottom: 1px solid gray;
 }
+
+.entry-button {
+    margin: 0.2em;
+}
+
+.entry-button:hover {
+    cursor: pointer;
+}
