@@ -14,7 +14,8 @@ body {
     margin-bottom: 1em;
 }
 
-.entry-form {
+.entry-form,
+#entries {
     width: 40%;
     height: 20em;
     margin: 5px auto;
@@ -43,4 +44,19 @@ body {
     background-color: #117a65;
     color: white;
     font-size: 1em;
+}
+
+#entries {
+    background-color: #D0F5DF;
+    font-family: cursive;
+    color: #0D542A;
+    padding: 2em;
+    margin-top: 1em;
+    border-radius: 10px;
+    height: auto;
+}
+
+#entries div {
+    margin: 4px;
+    border-bottom: 1px solid gray;
 }
